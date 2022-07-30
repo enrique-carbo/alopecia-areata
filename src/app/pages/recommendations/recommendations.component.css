@@ -1,0 +1,46 @@
+p {
+    font-size: 2vh;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    color: black;
+}
+
+.title {
+    font-size:8vh;
+    padding: 20px;
+    margin-right: 50px;
+    text-align: right;
+    color: rgb(40, 40, 40);
+    margin-bottom: 10px;
+} 
+
+.description-card {
+    margin-top: 10px;
+    margin-right: 50px;
+    padding-left: 35px;
+    padding-right: 35px;
+    max-width: 300px;
+    background-color: #ddd;
+    opacity: 0.8;
+}
+
+.bg-image {
+    background-image: url("../../../assets/img/patient-doctor.jpg");
+    padding-top: 100px;
+    background-color: #cccccc;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 10vw;
+        margin-right: 0;
+        text-align: center; 
+    }
+
+}

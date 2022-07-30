@@ -1,0 +1,139 @@
+p {
+    font-size: 2vh;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    color: rgb(40, 40, 40);
+}
+.title {
+    font-size:8vh;
+    padding: 20px;
+    margin-right: 50px;
+    text-align: right;
+    color: #ffffff;
+    margin-bottom: 10px;
+} 
+
+.description-card {
+    margin-top: 10px;
+    margin-right: 50px;
+    padding-left: 35px;
+    padding-right: 35px;
+    max-width: 300px;
+    background-color: #ddd;
+    opacity: 0.5;
+}
+
+.bg-image {
+    background-image: url("../../../assets/img/woman-alopecia.jpg");
+    padding-top: 100px;
+    background-color: #cccccc;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 10vw;
+        margin-right: 0;
+        text-align: center; 
+        color: white;
+    }
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+    max-width: 500px;
+}
+
+.max-width-image {
+    max-width: 600px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+.margin-buttom-50 {
+    margin-bottom: 50px;
+}
+
+.margin-buttom-100 {
+    margin-bottom: 100px;
+}
+
+.center-element-70 {
+    margin: auto;
+    width: 70%;
+}
+
+.center-element-90 {
+    margin: auto;
+    width: 90%;
+}
+
+.section1-title {
+    font-weight: normal;
+    font-size: 26px;
+    margin: 2px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-style: italic;
+}
+
+.section-text {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.section1-card {
+    box-shadow: 10px 10px 5px gray
+}
+
+.section1-card:hover {
+    background-color: lightblue;
+}
+
+.section2-title {
+    font-size: 30px;
+    font-family: Georgia, serif;
+    line-height: 1.2;
+}
+
+.section2-text {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.background-gray {
+    background-color: #ddd;
+}
+
+.padding-y-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.padding-x-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+

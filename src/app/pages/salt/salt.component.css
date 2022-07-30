@@ -1,0 +1,124 @@
+p {
+    font-size: 2vh;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    color: rgb(40, 40, 40);
+}
+.title {
+    font-size:8vh;
+    padding: 20px;
+    margin-right: 50px;
+    text-align: right;
+    color: black;
+    margin-bottom: 10px;
+} 
+
+.description-card {
+    margin-top: 10px;
+    margin-right: 50px;
+    padding-left: 35px;
+    padding-right: 35px;
+    max-width: 300px;
+    background-color: #ddd;
+    opacity: 0.5;
+}
+
+.bg-image {
+    background-image: url("../../../assets/img/severity-score.jpg");
+    padding-top: 100px;
+    background-color: #cccccc;
+    height: 300px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 10vw;
+        margin-right: 0;
+        text-align: center; 
+        
+    }
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+.margin-bottom-150 {
+    margin-bottom: 150px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-bottom-50 {
+    margin-bottom: 50px;
+}
+
+.patient-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.input-full-width {
+    width: 100%;
+}
+
+.salt-image {
+  width: 100%;
+  max-width: 200px;
+  height: 250px;
+}
+
+.max-width-1000 {
+    max-width: 1000px;
+}
+
+.max-width-500 {
+    max-width: 500px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.result-card {
+    min-width: 200px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-size-26 {
+    font-size: 26px;
+}
+
+.text-color-red {
+    color: red;
+}
+
+.margin-5 {
+    margin: 5px;
+}
+
+@media print {
+        #non-printable { display: none; }
+        #printable { display: block; }
+}

@@ -1,0 +1,173 @@
+<header class="bg-image" id="non-printable">
+    <div class="title font-ibarra-real-nova">SALT Score</div>
+
+    <div fxLayout="row" fxLayoutAlign="end" fxHide.lt-sm>
+        <mat-card class="description-card">
+            <p>AA severity in clinical trials based on the Severity of Alopecia Tool score.</p>
+        </mat-card>
+    </div>
+</header>
+
+<!--------------------- Section 1  ------------------------------------------>
+
+<div fxLayout="row" fxLayoutAlign="center center" class="margin-top-50 margin-bottom-50">
+    <div>
+        <mat-card class="max-width-500">
+            <div>
+                SALT score is used in clinical trials to assess the extent of scalp hair loss.
+            </div>
+            <div>
+                Multiplying the percentage of hair loss in each of the 4 quadrants of the scalp by the
+                quadrant surface area. Adding the 4 values together for a composite score.
+                <span class="text-bold">Enter in each quadrant the percentage of terminal hair loss from 0 to 100</span>
+            </div>
+            <div>
+                Maximum SALT score of 100 indicates complete scalp hair loss
+                Minimum SALT score of 0 indicates no hair loss
+            </div>
+        </mat-card>
+        
+    </div>
+</div>
+
+<!--------------------- Section 2  ------------------------------------------>
+
+<div fxLayout="row" fxLayoutAlign="center center" >
+    <div [formGroup]="patientForm" class="patient-form">
+        <div>
+            <mat-form-field appearance="outline" class="input-full-width" id="printable">
+                <mat-label for="first-name">First Name</mat-label>
+                <input matInput placeholder="Your name" id="first-name" 
+                type="text" formControlName="firstName" autocomplete="off">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="outline" class="input-full-width" id="printable">
+                <mat-label for="last-name">Last Name</mat-label>
+                <input matInput placeholder="Your last name" id="last-name" 
+                type="text" formControlName="lastName" autocomplete="off">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="outline" class="input-full-width" id="printable">
+                <mat-label for="identification">ID</mat-label>
+                <input matInput placeholder="Id" id="identification" 
+                type="number" formControlName="identification" autocomplete="off">
+            </mat-form-field>
+        </div>
+                 
+    </div>
+
+</div>
+
+<!--------------------- Section 3  ------------------------------------------>
+
+<div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center center" 
+class="margin-top-50 margin-bottom-50">
+
+   <div [formGroup]="saltScore" fxLayout="row" 
+    fxLayoutAlign="space-around center" 
+    fxLayout.lt-md="column" 
+    fxLayoutGap="20px"
+    class="max-width-1000"
+    >
+    
+        <div fxFlex>
+            <img src="./assets/img/saltImages/lateral-izquierdo.png" 
+            alt="Left side man head" 
+            class="salt-image"
+            id="non-printable"
+            >
+            <mat-form-field appearance="outline" class="input-full-width margin-top-20" id="printable">
+                <mat-label for="left-side">Left Side</mat-label>
+                <input matInput placeholder="Percent" id="left-side" 
+                type="number" formControlName="leftSide" autocomplete="off"
+                min="0" max="100" required>
+            </mat-form-field>
+        </div>
+
+        <div fxFlex>
+            <img src="./assets/img/saltImages/lateral-derecho.png" 
+            alt="Right side man head" 
+            class="salt-image"
+            id="non-printable">
+            <mat-form-field appearance="outline" class="input-full-width margin-top-20" id="printable">
+                <mat-label for="right-side">Right Side</mat-label>
+                <input matInput placeholder="Percent" id="right-side" 
+                type="number" formControlName="rightSide" autocomplete="off"
+                min="0" max="100" required>
+            </mat-form-field>
+        </div>
+
+        <div fxFlex>
+            <img src="./assets/img/saltImages/salt1.png" 
+            alt="Top scalp man head" 
+            class="salt-image"
+            id="non-printable">
+            <mat-form-field appearance="outline" class="input-full-width margin-top-20" id="printable">
+                <mat-label for="top-scalp">Top</mat-label>
+                <input matInput placeholder="Percent" id="top-scalp" 
+                type="number" formControlName="topScalp" autocomplete="off"
+                min="0" max="100" required>
+            </mat-form-field>
+        </div>
+
+        <div fxFlex>
+            <img src="./assets/img/saltImages/scalp-back.png" 
+            alt="Back man head" 
+            class="salt-image"
+            id="non-printable">
+            <mat-form-field appearance="outline" class="input-full-width margin-top-20" id="printable">
+                <mat-label for="back-scalp">Back</mat-label>
+                <input matInput placeholder="Percent" id="back-scalp" 
+                type="number" formControlName="backScalp" autocomplete="off"
+                min="0" max="100" required>
+            </mat-form-field>
+        </div>
+    </div>
+
+    
+</div>
+
+<!--------------------- Section 4  ------------------------------------------>
+
+<div fxLayout="row" fxLayoutAlign="center center" class="margin-top-50 margin-bottom-150">
+    <div class="result-card">
+        <mat-card >
+            <div class="margin-bottom-20 text-center text-bold text-color-red"
+            *ngIf="saltScore.status === 'INVALID'">
+                The percentage is from 0 to 100
+            </div>
+            <div class="margin-bottom-20 text-center text-bold text-color-red"
+            *ngIf="saltScore.status === 'INVALID'">
+                Fields must be completed.
+            </div>
+            
+            <div class="margin-5" id="non-printable">   
+                <button mat-raised-button color="primary" class="full-width"
+                (click)="saltScoreCalc()" [disabled]="saltScore.status === 'INVALID'"
+                >Calculate</button>    
+            </div>
+
+            <div class="margin-5" id="non-printable">    
+                <button mat-raised-button color="warn" class="full-width"
+                (click)="resetFields()"
+                >Reset</button>    
+            </div>
+
+            <div class="margin-5" id="non-printable">
+                <button mat-raised-button color="accent" class="full-width"
+                (click)="printThisPage()"
+                >Print</button>
+            </div>
+
+            <div class="margin-top-20 text-center text-bold text-size-26" id="printable"
+            *ngIf="saltScore.status === 'VALID' && saltScoreResult > 0">
+                SALT Score {{ saltScoreResult }} 
+            </div>
+            
+        </mat-card>
+    </div>
+</div>
