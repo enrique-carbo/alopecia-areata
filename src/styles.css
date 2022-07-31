@@ -6,3 +6,34 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .font-ibarra-real-nova {
     font-family: 'Ibarra Real Nova', serif;
 }
+
+/* Margins */
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+.margin-bottom-150 {
+    margin-bottom: 150px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-bottom-50 {
+    margin-bottom: 50px;
+}
+
+/* Text */ 
+.text-bold {
+    font-weight: bold;
+}
+
+@media print {
+    .non-printable { display: none; }
+    .printable { display: block; }
+}

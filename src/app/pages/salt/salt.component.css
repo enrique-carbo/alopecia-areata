@@ -118,7 +118,4 @@ p {
     margin: 5px;
 }
 
-@media print {
-        #non-printable { display: none; }
-        #printable { display: block; }
-}
+

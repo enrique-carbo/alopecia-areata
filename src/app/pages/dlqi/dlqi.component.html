@@ -7,3 +7,197 @@
         </mat-card>
     </div>
 </header>
+
+<!--------------------- Section 1  ------------------------------------------>
+
+<div fxLayout="row" fxLayoutAlign="center center" class="margin-top-50 margin-bottom-50">
+    <div>
+        <mat-card class="max-width-500">
+            <div>
+                The aim of this questionnaire is to measure how much your skin problem has
+                affected your life <span class="text-bold">OVER THE LAST WEEK</span>. 
+                Please choose one box for each question.
+            </div>
+        </mat-card>
+        
+    </div>
+</div>
+
+<!--------------------- Section 2  ------------------------------------------>
+
+<div fxLayout="row" fxLayoutAlign="center center" class="margin-bottom-50">
+    <div [formGroup]="patientForm" class="patient-form">
+        <div>
+            <mat-form-field appearance="outline" class="input-full-width printable">
+                <mat-label for="first-name">First Name</mat-label>
+                <input matInput placeholder="Your name" id="first-name" 
+                type="text" formControlName="firstName" autocomplete="off">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="outline" class="input-full-width printable">
+                <mat-label for="last-name">Last Name</mat-label>
+                <input matInput placeholder="Your last name" id="last-name" 
+                type="text" formControlName="lastName" autocomplete="off">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="outline" class="input-full-width printable">
+                <mat-label for="identification">ID</mat-label>
+                <input matInput placeholder="Id" id="identification" 
+                type="number" formControlName="identification" autocomplete="off">
+            </mat-form-field>
+        </div>
+                 
+    </div>
+
+</div>
+
+<!--------------------- Section 3  ------------------------------------------>
+
+<div fxLayout="row" fxLayoutAlign="center center" class="margin-bottom-150">
+    <div [formGroup]="dlqiForm" class="max-width-500">
+        <div>
+            <div>1.</div>
+            <div>Over the last week, how itchy, sore, painful or stinging has your skin been?</div>
+            <mat-form-field appearance="outline">
+                <mat-label for="question1">Question 1</mat-label>
+                <mat-select formControlName="selectedQuestion1" name="question1">
+                    <mat-option *ngFor="let resp of responses1" [value]="resp.value">
+                        {{resp.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <div>2.</div>
+            <div>Over the last week, how embarrassed or self conscious have you been because
+            of your skin?</div>
+            <mat-form-field appearance="outline">
+                <mat-label for="question2">Question 2</mat-label>
+                <mat-select formControlName="selectedQuestion2" name="question2">
+                    <mat-option *ngFor="let resp of responses1" [value]="resp.value">
+                        {{resp.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <div>3.</div>
+            <div>Over the last week, how much has your skin interfered with you going
+            shopping or looking after your home or garden?</div>
+            <mat-form-field appearance="outline">
+                <mat-label for="question3">Question 3</mat-label>
+                <mat-select formControlName="selectedQuestion3" name="question3">
+                    <mat-option *ngFor="let resp of responses2" [value]="resp.value">
+                        {{resp.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <div>4.</div>
+            <div>Over the last week, how much has your skin influenced the clothes
+            you wear?</div>
+            <mat-form-field appearance="outline">
+                <mat-label for="question4">Question 4</mat-label>
+                <mat-select formControlName="selectedQuestion4" name="question4">
+                    <mat-option *ngFor="let resp of responses2" [value]="resp.value">
+                        {{resp.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <div>5.</div>
+            <div>Over the last week, how much has your skin affected any social or
+            leisure activities?</div>
+            <mat-form-field appearance="outline">
+                <mat-label for="question5">Question 5</mat-label>
+                <mat-select formControlName="selectedQuestion5" name="question5">
+                    <mat-option *ngFor="let resp of responses2" [value]="resp.value">
+                        {{resp.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <div>6.</div>
+            <div>Over the last week, how much has your skin made it difficult for
+            you to do any sport?</div>
+            <mat-form-field appearance="outline">
+                <mat-label for="question6">Question 6</mat-label>
+                <mat-select formControlName="selectedQuestion6" name="question6">
+                    <mat-option *ngFor="let resp of responses2" [value]="resp.value">
+                        {{resp.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <div>7.</div>
+            <div>Over the last week how much has your skin been a problem at
+            work or studying?</div>
+            <mat-form-field appearance="outline">
+                <mat-label for="question7">Question 7</mat-label>
+                <mat-select formControlName="selectedQuestion7" name="question7">
+                    <mat-option *ngFor="let resp of responses2" [value]="resp.value">
+                        {{resp.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <div>8.</div>
+            <div>Over the last week, how much has your skin created problems with your
+            partner or any of your close friends or relatives?</div>
+            <mat-form-field appearance="outline">
+                <mat-label for="question8">Question 8</mat-label>
+                <mat-select formControlName="selectedQuestion8" name="question8">
+                    <mat-option *ngFor="let resp of responses2" [value]="resp.value">
+                        {{resp.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <div>9.</div>
+            <div>Over the last week, how much has your skin caused any sexual
+            difficulties?</div>
+            <mat-form-field appearance="outline">
+                <mat-label for="question9">Question 9</mat-label>
+                <mat-select formControlName="selectedQuestion9" name="question9">
+                    <mat-option *ngFor="let resp of responses2" [value]="resp.value">
+                        {{resp.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <div>10.</div>
+            <div>Over the last week, how much of a problem has the treatment for your
+            skin been, for example by making your home messy, or by taking up time?</div>
+            <mat-form-field appearance="outline">
+                <mat-label for="question10">Question 10</mat-label>
+                <mat-select formControlName="selectedQuestion10" name="question10">
+                    <mat-option *ngFor="let resp of responses2" [value]="resp.value">
+                        {{resp.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+    </div>
+
+</div>

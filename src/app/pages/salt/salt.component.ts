@@ -44,7 +44,7 @@ export class SaltComponent implements OnInit {
   }
 
   resetFields = () => {
-    this.saltScore.setValue({leftSide: 0, rightSide: 0, backScalp: 0, topScalp: 0 })
+    this.saltScore.reset()
     this.saltScoreResult = 0
     
   }

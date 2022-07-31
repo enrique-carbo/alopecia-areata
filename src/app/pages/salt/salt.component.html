@@ -1,4 +1,4 @@
-<header class="bg-image" id="non-printable">
+<header class="bg-image non-printable">
     <div class="title font-ibarra-real-nova">SALT Score</div>
 
     <div fxLayout="row" fxLayoutAlign="end" fxHide.lt-sm>
@@ -35,7 +35,7 @@
 <div fxLayout="row" fxLayoutAlign="center center" >
     <div [formGroup]="patientForm" class="patient-form">
         <div>
-            <mat-form-field appearance="outline" class="input-full-width" id="printable">
+            <mat-form-field appearance="outline" class="input-full-width printable">
                 <mat-label for="first-name">First Name</mat-label>
                 <input matInput placeholder="Your name" id="first-name" 
                 type="text" formControlName="firstName" autocomplete="off">
@@ -43,7 +43,7 @@
         </div>
 
         <div>
-            <mat-form-field appearance="outline" class="input-full-width" id="printable">
+            <mat-form-field appearance="outline" class="input-full-width printable" >
                 <mat-label for="last-name">Last Name</mat-label>
                 <input matInput placeholder="Your last name" id="last-name" 
                 type="text" formControlName="lastName" autocomplete="off">
@@ -51,7 +51,7 @@
         </div>
 
         <div>
-            <mat-form-field appearance="outline" class="input-full-width" id="printable">
+            <mat-form-field appearance="outline" class="input-full-width printable">
                 <mat-label for="identification">ID</mat-label>
                 <input matInput placeholder="Id" id="identification" 
                 type="number" formControlName="identification" autocomplete="off">
@@ -77,10 +77,9 @@ class="margin-top-50 margin-bottom-50">
         <div fxFlex>
             <img src="./assets/img/saltImages/lateral-izquierdo.png" 
             alt="Left side man head" 
-            class="salt-image"
-            id="non-printable"
+            class="salt-image non-printable"
             >
-            <mat-form-field appearance="outline" class="input-full-width margin-top-20" id="printable">
+            <mat-form-field appearance="outline" class="input-full-width margin-top-20 printable">
                 <mat-label for="left-side">Left Side</mat-label>
                 <input matInput placeholder="Percent" id="left-side" 
                 type="number" formControlName="leftSide" autocomplete="off"
@@ -91,9 +90,9 @@ class="margin-top-50 margin-bottom-50">
         <div fxFlex>
             <img src="./assets/img/saltImages/lateral-derecho.png" 
             alt="Right side man head" 
-            class="salt-image"
-            id="non-printable">
-            <mat-form-field appearance="outline" class="input-full-width margin-top-20" id="printable">
+            class="salt-image non-printable"
+            >
+            <mat-form-field appearance="outline" class="input-full-width margin-top-20 printable">
                 <mat-label for="right-side">Right Side</mat-label>
                 <input matInput placeholder="Percent" id="right-side" 
                 type="number" formControlName="rightSide" autocomplete="off"
@@ -104,9 +103,9 @@ class="margin-top-50 margin-bottom-50">
         <div fxFlex>
             <img src="./assets/img/saltImages/salt1.png" 
             alt="Top scalp man head" 
-            class="salt-image"
-            id="non-printable">
-            <mat-form-field appearance="outline" class="input-full-width margin-top-20" id="printable">
+            class="salt-image non-printable"
+            >
+            <mat-form-field appearance="outline" class="input-full-width margin-top-20 printable">
                 <mat-label for="top-scalp">Top</mat-label>
                 <input matInput placeholder="Percent" id="top-scalp" 
                 type="number" formControlName="topScalp" autocomplete="off"
@@ -117,9 +116,9 @@ class="margin-top-50 margin-bottom-50">
         <div fxFlex>
             <img src="./assets/img/saltImages/scalp-back.png" 
             alt="Back man head" 
-            class="salt-image"
-            id="non-printable">
-            <mat-form-field appearance="outline" class="input-full-width margin-top-20" id="printable">
+            class="salt-image non-printable"
+            >
+            <mat-form-field appearance="outline" class="input-full-width margin-top-20 printable">
                 <mat-label for="back-scalp">Back</mat-label>
                 <input matInput placeholder="Percent" id="back-scalp" 
                 type="number" formControlName="backScalp" autocomplete="off"
@@ -145,25 +144,25 @@ class="margin-top-50 margin-bottom-50">
                 Fields must be completed.
             </div>
             
-            <div class="margin-5" id="non-printable">   
+            <div class="margin-5 non-printable">   
                 <button mat-raised-button color="primary" class="full-width"
                 (click)="saltScoreCalc()" [disabled]="saltScore.status === 'INVALID'"
                 >Calculate</button>    
             </div>
 
-            <div class="margin-5" id="non-printable">    
+            <div class="margin-5 non-printable">    
                 <button mat-raised-button color="warn" class="full-width"
                 (click)="resetFields()"
                 >Reset</button>    
             </div>
 
-            <div class="margin-5" id="non-printable">
+            <div class="margin-5 non-printable">
                 <button mat-raised-button color="accent" class="full-width"
                 (click)="printThisPage()"
                 >Print</button>
             </div>
 
-            <div class="margin-top-20 text-center text-bold text-size-26" id="printable"
+            <div class="margin-top-20 text-center text-bold text-size-26 printable" 
             *ngIf="saltScore.status === 'VALID' && saltScoreResult > 0">
                 SALT Score {{ saltScoreResult }} 
             </div>

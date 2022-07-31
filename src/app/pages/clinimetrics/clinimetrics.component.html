@@ -100,30 +100,41 @@ class="margin-top-50 margin-x-50 margin-bottom-50">
 
 <!-------------------------- Section 3  Calculators Cards ------------------------------------->
 
-<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" fxLayoutAlign="center center"
+<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" fxLayoutAlign="center"
 class="margin-top-50 margin-bottom-150 margin-x-50">
-    <div fxFlex>
+    <div fxFlex class="max-width-600">
         <mat-card>
-            <div>Dermatology Life Quality Index</div>
-            <div>DLQI</div>
-            <div>The Dermatology life Quality Index is a ten-question questionnaire used to measure
+            <div class="text-center">
+                <mat-card-title>Dermatology Life Quality Index</mat-card-title>
+                <mat-card-subtitle>DLQI</mat-card-subtitle>
+
+                <img mat-card-xl-image src="./assets/img/dlqi-score.png" alt="DLQI score">
+            </div>
+            
+            <mat-card-content>
+                <div>The Dermatology life Quality Index is a ten-question questionnaire used to measure
                 the impact of skin disease on the quality of life of an affected person.</div>
-        
+            </mat-card-content>
         <mat-card-actions>
             <button  mat-raised-button color="primary" routerLink="/dlqi">Score</button>
         </mat-card-actions>
         </mat-card>
     </div>
 
-    <div fxFlex>
+    <div fxFlex class="max-width-600">
         <mat-card>
-            <div>Severity of Alopecia Tool</div>
-            <div>SALT</div>
-
+            <div class="text-center">
+                <mat-card-title>Severity of Alopecia Tool</mat-card-title>
+                <mat-card-subtitle class="margin-top-20">SALT</mat-card-subtitle>
+                <img mat-card-xl-image src="./assets/img/AA-illustration.png" alt="Alopeica illustration">
+            </div>
+        <mat-card-content>
             <div>The Severity of Alopecia Tool (SALT) is widely used to
             assess the extent of scalp-hair loss in AA.</div>
             <div>Percent scalp hair loss. This takes into account
             the percent of the scalp surface with no hair.</div>
+        </mat-card-content>    
+            
 
         <mat-card-actions>
             <button  mat-raised-button color="primary" routerLink="/salt">Score</button>
