@@ -11,7 +11,7 @@
 <!--------------------- Section 1  ------------------------------------------>
 
 <div fxLayout="row" fxLayoutAlign="center center" class="margin-top-50 margin-bottom-50">
-    <div>
+    <div class="margin-x-10">
         <mat-card class="max-width-500">
             <div>
                 SALT score is used in clinical trials to assess the extent of scalp hair loss.
@@ -33,7 +33,7 @@
 <!--------------------- Section 2  ------------------------------------------>
 
 <div fxLayout="row" fxLayoutAlign="center center" >
-    <div [formGroup]="patientForm" class="patient-form">
+    <div [formGroup]="patientForm" class="patient-form margin-x-10">
         <div>
             <mat-form-field appearance="outline" class="input-full-width printable">
                 <mat-label for="first-name">First Name</mat-label>
@@ -71,7 +71,7 @@ class="margin-top-50 margin-bottom-50">
     fxLayoutAlign="space-around center" 
     fxLayout.lt-md="column" 
     fxLayoutGap="20px"
-    class="max-width-1000"
+    class="max-width-1000 margin-x-10"
     >
     
         <div fxFlex>
@@ -133,7 +133,7 @@ class="margin-top-50 margin-bottom-50">
 <!--------------------- Section 4  ------------------------------------------>
 
 <div fxLayout="row" fxLayoutAlign="center center" class="margin-top-50 margin-bottom-150">
-    <div class="result-card">
+    <div class="result-card margin-x-10">
         <mat-card >
             <div class="margin-bottom-20 text-center text-bold text-color-red"
             *ngIf="saltScore.status === 'INVALID'">

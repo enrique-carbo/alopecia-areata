@@ -16,6 +16,7 @@ export class SaltComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
   patientForm = new FormGroup({
@@ -44,6 +45,7 @@ export class SaltComponent implements OnInit {
   }
 
   resetFields = () => {
+    this.patientForm.reset()
     this.saltScore.reset()
     this.saltScoreResult = 0
     

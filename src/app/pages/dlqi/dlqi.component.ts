@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
+
 interface Response {
   value: number;
   viewValue: string;
@@ -13,9 +14,11 @@ interface Response {
 })
 export class DlqiComponent implements OnInit {
 
+  public dlqiScoreResult:Number = 0 
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
   }
 
   patientForm = new FormGroup({
@@ -51,5 +54,30 @@ export class DlqiComponent implements OnInit {
     {value: 0, viewValue: "Not at all"},
     {value: 0, viewValue: "Not relevant"}
   ]
+
+  //Print Page
+  printThisPage() {
+    window.print()
+  }
+
+
+  //Reset Fields
+  resetFields = () => {
+    this.patientForm.reset()
+    this.dlqiForm.reset()
+    this.dlqiScoreResult = 0
+    
+  }
+
+  dlqiScoreCalculation = () => {
+    let pre = "this.dlqiForm.value."
+    console.log( `${pre}selectedQuestion1`)
+    console.log(this.dlqiForm)
+
+    this.dlqiScoreResult = this.dlqiForm.value.selectedQuestion1 + this.dlqiForm.value.selectedQuestion2 +
+    this.dlqiForm.value.selectedQuestion3 + this.dlqiForm.value.selectedQuestion4 + this.dlqiForm.value.selectedQuestion5 +
+    this.dlqiForm.value.selectedQuestion6 + this.dlqiForm.value.selectedQuestion7 + this.dlqiForm.value.selectedQuestion8 +
+    this.dlqiForm.value.selectedQuestion9 + this.dlqiForm.value.selectedQuestion10  
+  }
 
 }

@@ -57,3 +57,34 @@ p {
 .input-full-width {
     width: 100%;
 }
+
+.result-card {
+    min-width: 200px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+} 
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-size-26 {
+    font-size: 26px;
+}
+
+.margin-5 {
+    margin: 5px;
+}
+
+.margin-x-10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}

@@ -44,3 +44,44 @@ p {
     }
 
 }
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.max-width-600 {
+    max-width: 600px;
+}
+
+.section1-card {
+    box-shadow: 10px 10px 5px gray
+}
+
+.section1-card:hover {
+    background-color: lightblue;
+}
+
+.center-element-70 {
+    margin: auto;
+    width: 70%;
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.section1-title {
+    font-weight: normal;
+    font-size: 26px;
+    margin: 2px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-style: italic;
+}
+
+.section-text {
+    font-size: 16px;
+}
